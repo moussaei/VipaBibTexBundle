@@ -204,6 +204,11 @@ class Bibtex
         }
     }
 
+    function setContent($string)
+    {
+        $this->content = $string; 
+    }
+    
     /**
      * Reads a give BibTex File
      *
@@ -319,11 +324,14 @@ class Bibtex
             }
         }
         if ($valid) {
-            $this->content = '';
+
             return true;
         } else {
-            throw new BibtexException('Unbalanced parenthesis');
+            // Modif P.He 13 04 17 
+           //throw new BibtexException('Unbalanced parenthesis');
+             return false;
         }
+ 
     }
 
     /**

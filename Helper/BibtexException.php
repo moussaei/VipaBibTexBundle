@@ -27,4 +27,10 @@ use Symfony\Component\Config\Definition\Exception\Exception;
  */
 class BibtexException extends Exception
 {
+    public function __construct($message) {
+      //  dump($message);
+     
+        return (false);
+    //    die();
+    }
 }
